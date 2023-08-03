@@ -12,7 +12,7 @@ type InfoModalProps = {
 };
 
 const InfoModal = ({ visible, onClose }:InfoModalProps) => {
-    const [isVisible, setIsVisible] = useState(!!visible);
+    const [isVisible, setIsVisible] = useState(!!visible); //仅控制动画
 
     const { movieId } = useInfoModal();
     const { data = [] } = useMovie(movieId);
@@ -29,7 +29,7 @@ const InfoModal = ({ visible, onClose }:InfoModalProps) => {
         }, 300);
     }, [onClose]);
 
-    if(!isVisible){
+    if(!visible){
         return null;
     }
 
@@ -118,3 +118,13 @@ const InfoModal = ({ visible, onClose }:InfoModalProps) => {
 }
  
 export default InfoModal;
+
+// 在这个React组件中，延迟启动 onClose 是为了达到动画效果的需求。 isVisible 状态被用于控制一个转换动画，当 isVisible 为 true，组件呈现出现的动画，而当 isVisible 为 false，组件呈现消失的动画。
+
+// 然而，这个动画并不是瞬间完成的，而是需要一定的时间，这个时间在这个组件中被设定为300毫秒（duration-300）。
+
+// 如果不使用 setTimeout 来延迟 onClose 的调用，那么 isOpen 将会立即被设为 false，此时的 InfoModal 也会立即从DOM中移除。这意味着即使你的 isVisible 状态变为 false，你也无法看到消失的动画，因为 InfoModal 已经被移除了。
+
+// 通过使用 setTimeout 来延迟 onClose 的调用，你可以在 isVisible 状态变为 false 后，给出足够的时间让消失的动画播放完成，然后再将 isOpen 设置为 false，移除 InfoModal。这样你就可以看到一个完整的消失动画了。
+
+// 值得注意的是，如果你在其他地方依赖于 isOpen 状态，你需要确保这个延迟的时间（这里是300毫秒）不会对你的其他逻辑产生负面影响。如果有可能的话，最好是让 isOpen 和 isVisible 同时改变，以避免不必要的复杂性和混乱。
