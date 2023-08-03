@@ -1,18 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./components/**/*.{html,js,jsx,tsx}",
-    "./app/**/*.{html,js,jsx,tsx}",
-    "./pages/**/*.{html,js,jsx,tsx}"
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-  variants: {
-    extend: {
-      scale: ['peer-placeholder-shown', 'peer-focus'],
-      translate: ['peer-placeholder-shown', 'peer-focus']
-    },
-  },
 }
