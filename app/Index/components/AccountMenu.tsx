@@ -2,7 +2,7 @@
 import React from "react";
 // import getCurrentUser from "@/app/actions/getCurrentUser";
 import { signOut } from "next-auth/react";
-
+import Image from "next/image";
 interface AccountMenuProps {
     visible?: boolean
     name?: string

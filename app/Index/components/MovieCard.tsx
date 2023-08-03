@@ -5,6 +5,8 @@ import { BiChevronDown } from 'react-icons/bi'
 import FavoriteButton from './FavoriteButton';
 import { useRouter } from 'next/navigation';
 import useInfoModal from '@/app/hooks/useInfoModal';
+import Image from "next/image";
+
 
 type MovieCardProps = {
     data: Record<string, any>

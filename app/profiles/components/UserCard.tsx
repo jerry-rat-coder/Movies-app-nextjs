@@ -1,6 +1,7 @@
 'use client'
 import { useRouter } from "next/navigation";
 import { useCallback } from 'react'
+import Image from "next/image";
 
 const images = [
     '/images/default-blue.png',
