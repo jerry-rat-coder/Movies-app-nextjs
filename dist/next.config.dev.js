@@ -2,6 +2,7 @@
 
 /** @type {import('next').NextConfig} */
 var nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  trailingSlash: true
 };
 module.exports = nextConfig;
