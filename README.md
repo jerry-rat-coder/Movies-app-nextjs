@@ -1,34 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Netflix精简版，技术栈：nextjs(app router)  ts  tailwindcss prisma nextauth  
 
-## Getting Started
+![image](https://user-images.githubusercontent.com/23248726/220005380-ede4fb14-0b8d-4582-a063-3cc4beeccfb7.png)
 
-First, run the development server:
+Features:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- video动画播放
+- 主页随机动画
+- 详细信息card
+- 收藏夹
+- 环境变量， Typescript， Nextjs app router
+- MongoDB Prisma 操作数据库
+- 使用 NextAuth、Google 和 Github 登录，身份验证，会话管理
+- 响应式
+- 基于 Cookie 的身份验证
+- API 和控制器创建
+- 使用TailwindCSS的注重细节的效果和动画
+- useSWR 数据获取与缓存
+- zustand状态管理
+
+### Prerequisites
+
+**Node version 14.x**
+
+### Cloning the repository
+
+```shell
+git clone git@github.com:jerry-rat-coder/Movies-app-nextjs.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Setup .env file
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+```js
+DATABASE_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_ID=
+GITHUB_SECRET=
+NEXTAUTH_JWT_SECRET=
+NEXTAUTH_SECRET=
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Start the app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```shell
+npm run dev
+```
 
-## Deploy on Vercel
+## Available commands
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Running commands with npm `npm run [command]`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
