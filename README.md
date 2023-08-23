@@ -1,5 +1,7 @@
 Netflix精简版，技术栈：nextjs(app router)  ts  tailwindcss prisma nextauth  
 
+## 在线预览：[Create Next App (movies-app-nextjs-psi.vercel.app)](https://movies-app-nextjs-psi.vercel.app/)
+
 **Features**:
 
 - video动画播放
