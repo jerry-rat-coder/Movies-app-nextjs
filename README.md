@@ -1,8 +1,6 @@
 Netflix精简版，技术栈：nextjs(app router)  ts  tailwindcss prisma nextauth  
 
-![image](https://user-images.githubusercontent.com/23248726/220005380-ede4fb14-0b8d-4582-a063-3cc4beeccfb7.png)
-
-Features:
+**Features**:
 
 - video动画播放
 - 主页随机动画
@@ -52,11 +50,3 @@ NEXTAUTH_SECRET=
 ```shell
 npm run dev
 ```
-
-## Available commands
-
-Running commands with npm `npm run [command]`
-
-| command         | description                              |
-| :-------------- | :--------------------------------------- |
-| `dev`           | Starts a development instance of the app |
